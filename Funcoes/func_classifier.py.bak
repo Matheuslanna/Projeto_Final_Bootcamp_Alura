@@ -55,7 +55,7 @@ class Classifier:
         y : conjunto de dados com as respostas da variável alvo
         estimator : modelo de machine learning
         '''
-        self.seed = 324551
+        self.seed = seed
         df = df.sample(frac=1, random_state=self.seed).reset_index(drop=True)
         self.x = df.drop(target_variable, axis=1)
         self.y = df[target_variable]
